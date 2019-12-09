@@ -1,0 +1,14 @@
+<!--
+  @File Name          : myEverythingComponent.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 22/11/2019, 12:39:04 pm
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    22/11/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component>
+    I'll have one with everything
+</aura:component>	

@@ -1,0 +1,18 @@
+<!--
+  @File Name          : campingList.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 29/11/2019, 3:30:25 pm
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    29/11/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component>
+    <li title="List of camping Items">
+        <ol>Bug Spray</ol>
+        <ol>Bear Repellant</ol>
+        <ol>Goat Food</ol>
+    </li>
+</aura:component>	

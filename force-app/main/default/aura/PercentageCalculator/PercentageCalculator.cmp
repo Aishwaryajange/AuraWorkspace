@@ -1,0 +1,28 @@
+<!--
+  @File Name          : PercentageCalculator.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 5/12/2019, 5:10:03 pm
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    5/12/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component>
+    <aura:attribute name="WholeNumber" type="Integer" access="public" />
+    <aura:attribute name="percentage" type="Integer" access="public" />
+
+    <div>
+        <lightning:input type="number" name="input1" label="Enter a number" value="{!v.WholeNumber}" />
+        <lightning:input type="number" name="input1" label="Enter percentage" value="{!v.percentage}"
+        formatter="percent-fixed" />
+        {!v.WholeNumber} <br/>
+        {!v.percentage}
+        <br/>
+        <br/>
+        {!v.percentage} percent of {!v.WholeNumber} is == {!div(mult(v.WholeNumber, v.percentage),100)}
+        <br/>
+        
+    </div>
+</aura:component>

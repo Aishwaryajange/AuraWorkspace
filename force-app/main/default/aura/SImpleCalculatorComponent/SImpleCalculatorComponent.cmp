@@ -1,0 +1,28 @@
+<!--
+  @File Name          : SImpleCalculatorComponent.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 6/12/2019, 5:41:36 pm
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    6/12/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component>
+    <aura:attribute name="input1" type="Integer" description="for first input"/>
+    <aura:attribute name="input2" type="Integer" description="for second input"/>
+    <aura:attribute name="outPut" type="Integer" description="for output" />
+    
+    <div class="slds-p-top_xx-small">
+        <lightning:input type="number" value="{!v.input1}" label="Please enter first  number" required="true"/>
+    </div>
+    
+    <lightning:input type="number" value="{!v.input2}" label="Please enter second  number" required="true"/>
+    <lightning:input type="number" value="{!v.outPut}" label="The output is : --"/> <br/> <br/>
+    <!--buttons to perform operations-->
+    <lightning:button label="ADD" onclick="{!c.doAdd}" />
+    <lightning:button label="SUBTRACT" onclick="{!c.doSubtract}" />
+    <lightning:button label="MULTIPLY" onclick="{!c.doMult}" />
+    <lightning:button label="DIVIDE" onclick="{!c.doDivide}" />
+</aura:component>	

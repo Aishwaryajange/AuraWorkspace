@@ -1,0 +1,16 @@
+<!--
+  @File Name          : campingHeader.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 2/12/2019, 11:33:12 am
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    29/11/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component>
+  <h1 title="Camping List">
+    <c:campingList />
+  </h1> 
+</aura:component>	

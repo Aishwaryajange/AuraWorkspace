@@ -1,0 +1,31 @@
+<!--
+  @File Name          : CollectionComponent.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 6/12/2019, 12:52:32 pm
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    6/12/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component>
+    <aura:attribute name="whom" type="String" default="SFDCPanther" access="public" />
+    <aura:attribute name="age" type="Integer" default="24" access="public" />
+    <!--To relate to sobject has an variable in the attribute-->
+    <aura:attribute name="contactObj" type="Contact" access="public" />
+    <!--For the array -->
+    <aura:attribute name="colour" type="String[]" default="['red','blue','green']" access="public" />
+    <!--From the array to the List -->
+    <aura:attribute name="colourList" type="List" default="['red','blue','green']" access="public" />
+    <!--From the array to the Set -->
+    <aura:attribute name="colourSet" type="Set" default="['red','blue','green']" access="public" />
+
+
+    Welcome {!v.whom} , <br />
+    Age : {!v.age} , <br />
+    Color : {!v.colour[0]} and {!v.colour[2]}, <br />
+    List: {!v.colourList[1]} <br/>
+    <lightning:input aura:id="testInput" label="Enter Age"/>
+    <lightning:button label="Click Me" value="Component Method" onclick="{!c.doClick}" />
+</aura:component>	

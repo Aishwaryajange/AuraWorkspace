@@ -1,0 +1,29 @@
+<!--
+  @File Name          : campingListItem.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 2/12/2019, 12:01:58 pm
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    2/12/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component>
+    <aura:attribute name="item" type="Camping_Item__c" required="true" />
+    <p>
+        Name: {!v.item.Name}
+    </p>
+    <p>
+        Price: <lightning:formattedNumber value="{!v.item.Price__c}" style="currency" />
+    </p>
+    <p>
+        Quantity: <lightning:formattedNumber value="{!v.tem.Quantity__c}" style="number"/>
+    </p>
+    <p>
+        Packed?: <lightning:input type="toggle"
+                                  label="Packed?"
+                                  name="packed" 
+                                  checked="{!v.item.Packed__c}"/>
+    </p>
+</aura:component>

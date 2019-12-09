@@ -1,0 +1,25 @@
+<!--
+  @File Name          : helloMessageInteractive.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 2/12/2019, 12:39:56 pm
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    2/12/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component>
+    <aura:attribute name="message" type="String" />
+    <p>
+        Message of the day: {!v.message}
+    </p>
+    <div>
+        <lightning:button label="You look nice today"
+        onclick="{!c.handleClick}" />
+    </div>
+    <div>
+        <lightning:button label="Today is great Day"
+        onclick="{!c.handleClick}" />
+    </div>
+</aura:component>	

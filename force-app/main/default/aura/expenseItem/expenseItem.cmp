@@ -1,0 +1,27 @@
+<!--
+  @File Name          : expenseItem.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 2/12/2019, 11:49:56 am
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    2/12/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component>
+    <aura:attribute name="expense" type="Expense__c" />
+
+    <p>
+        Amount: <lightning:formattedNumber value="{!v.expense.Amount__c}" style="currency" />
+    </p>
+    <p>
+        Client: {!v.expense.Client__c}
+    </p>
+    <p>
+        <lightning:input type="toggle"
+                         label="Reimbursed?"
+                         name="reimbursed"
+                         checked="{!v.expense.Reimbursed__c}" />
+    </p>
+</aura:component>
