@@ -1,0 +1,30 @@
+<!--
+  @File Name          : MyFirstComponent.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 9/12/2019, 11:24:44 am
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    9/12/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component implements="flexipage:availableforRecordHome, force:hasRecordId" access="global">
+    <aura:attribute name="truthy" type="Boolean" default="True"/>
+    <div class="slds-p-around_small">
+        <h1 class="red"> I am in Lightning Component </h1>
+        <p style="background-color: red; color:white;"> I am in Paragraph</p>
+        <div class="green">
+            I am in div Tag
+        </div>
+        <span class="blue">
+            I am in span Tag
+        </span>
+    </div>
+    <aura:if isTrue="{!v.truthy}">
+    True
+        <aura:set attribute="else">
+        False
+        </aura:set>
+    </aura:if>
+</aura:component>
