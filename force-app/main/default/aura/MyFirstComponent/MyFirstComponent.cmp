@@ -4,13 +4,22 @@
   @Author             : aishwarya.jange@eternussolutions.com
   @Group              : 
   @Last Modified By   : aishwarya.jange@eternussolutions.com
-  @Last Modified On   : 9/12/2019, 11:24:44 am
+  @Last Modified On   : 9/12/2019, 3:20:23 pm
   @Modification Log   : 
   Ver       Date            Author      		    Modification
   1.0    9/12/2019   aishwarya.jange@eternussolutions.com     Initial Version
 -->
 <aura:component implements="flexipage:availableforRecordHome, force:hasRecordId" access="global">
+                <!--aura:handler name="init" value="{!this}" action="{!c.doInit}"/-->
     <aura:attribute name="truthy" type="Boolean" default="True"/>
+    <!--Attribut to be created which is type of list, which can be used for for loop as in apex
+        aura:iteration,
+        name="colourList" is equal to items="{!v.colourList}" in aura:iteration tag
+        type="List" items refers to List in aura:iteration
+        default="{red;blue;black}" is list has these default values stored in it
+    -->
+    <!--aura:attribute name="contactList" type="Contact[]" /-->
+    <aura:attribute name="mapVar" type="List"/>
     <div class="slds-p-around_small">
         <h1 class="red"> I am in Lightning Component </h1>
         <p style="background-color: red; color:white;"> I am in Paragraph</p>
@@ -21,10 +30,26 @@
             I am in span Tag
         </span>
     </div>
+    <!--if statement as in apex-->
     <aura:if isTrue="{!v.truthy}">
     True
         <aura:set attribute="else">
         False
         </aura:set>
-    </aura:if>
+    </aura:if> <br/>
+    <!--for loop as in apex-->
+    <lightning:button label="Create Map" onclick="{!c.doCLickMap}" name="mapCreate"/> <br/>
+    <aura:iteration items="{!v.mapVar}" var="map">
+        The key is : - {!map.key} and value is : - {!map.value} <br />
+    </aura:iteration>
+    <aura:iteration items="{!v.contactList}" var="contacts">
+            <td> {!contacts.LastName}</td>
+        <!--
+            for(String str :stringList){
+                String -> datatype
+                str -> var="item"
+                stringList -> items="{!v.stringList}"
+            }
+        -->
+    </aura:iteration>
 </aura:component>
