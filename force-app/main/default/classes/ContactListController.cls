@@ -4,7 +4,7 @@
  * @Author             : aishwarya.jange@eternussolutions.com
  * @Group              : 
  * @Last Modified By   : aishwarya.jange@eternussolutions.com
- * @Last Modified On   : 9/12/2019, 3:12:41 pm
+ * @Last Modified On   : 9/12/2019, 4:06:27 pm
  * @Modification Log   : 
  * Ver       Date            Author      		    Modification
  * 1.0    9/12/2019   aishwarya.jange@eternussolutions.com     Initial Version
@@ -22,7 +22,10 @@ public class ContactListController {
     public static List<Contact> getContactList(){
        List<Contact> contactList = new List<Contact>([SELECT
                                                             Id,
-                                                            LastName
+                                                            FirstName,
+                                                            LastName,
+                                                            Phone,
+                                                            Email
                                                        FROM
                                                             Contact
                                                        WHERE

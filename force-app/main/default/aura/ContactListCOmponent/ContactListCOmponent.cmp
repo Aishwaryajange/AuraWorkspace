@@ -1,0 +1,30 @@
+<!--
+  @File Name          : ContactListCOmponent.cmp
+  @Description        : 
+  @Author             : aishwarya.jange@eternussolutions.com
+  @Group              : 
+  @Last Modified By   : aishwarya.jange@eternussolutions.com
+  @Last Modified On   : 9/12/2019, 4:23:33 pm
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    9/12/2019   aishwarya.jange@eternussolutions.com     Initial Version
+-->
+<aura:component controller="ContactListController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="contactList" type="Contact[]"/>        
+        <div class="slds-p-around_small">
+            <aura:iteration items="{!v.contactList}" var="contact">
+                <lightning:card title="{!contact.LastName}" footer="{!contact.Email}" 
+                iconName="action:add_contact">
+                <aura:set attribute="actions">
+                    <lightning:button label="View Details" variant="brand" />
+                </aura:set>
+                <p class="slds-p-horizontal_small">
+                    {!contact.FirstName} &nbsp; &nbsp; {!contact.LastName} <br />
+                    {!contact.Phone}
+                </p>
+                    
+                </lightning:card>
+            </aura:iteration>
+        </div>    
+</aura:component>	
